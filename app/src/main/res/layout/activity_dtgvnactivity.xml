@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dtgvnactivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtVw2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="@string/businfo"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/bsNm2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/busname"
+                android:inputType="textPersonName"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sa_to2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/from"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/to2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/to"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/dt2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/dt"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/at2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="@string/artm"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/bno2"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/busnum"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="78dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bsearch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898" />
+
+    <Button
+        android:id="@+id/bsearch"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="56dp"
+        android:onClick="svbtn"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
