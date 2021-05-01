@@ -2,6 +2,8 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:title="Add user"
+        android:id="@+id/adduser"/>
     <item android:title="Delete Account"
         android:id="@+id/deleteacc"/>
     <item android:title="Dark Theme"
@@ -10,4 +12,6 @@
         android:id="@+id/lgththm"/>
     <item android:title="About Developer"
         android:id="@+id/abtd"/>
+    <item android:title="Contact Developer"
+        android:id="@+id/cntctd"/>
 </menu>

@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -175,15 +176,24 @@ public class SrchAct extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
 
+            case R.id.adduser:
+                Intent dd=new Intent(SrchAct.this,RegisterUser.class);
+                startActivity(dd);
+                break;
+
             case R.id.drkthm:
                 Toast.makeText(getApplicationContext(),"Theme changed!",Toast.LENGTH_SHORT).show();
                 //constraintLayout.setBackgroundColor(Color.BLACK);
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                Intent i1=new Intent(SrchAct.this,MainActivity.class);
+                startActivity(i1);
                 break;
             case R.id.lgththm:
                 Toast.makeText(getApplicationContext(),"Theme changed!",Toast.LENGTH_SHORT).show();
                 //constraintLayout.setBackgroundColor(Color.WHITE);
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                Intent i2=new Intent(SrchAct.this,MainActivity.class);
+                startActivity(i2);
                 break;
             case R.id.abtd:
                 showAlertDialog();
@@ -191,8 +201,23 @@ public class SrchAct extends AppCompatActivity {
             case R.id.deleteacc:
                 deleteaccount();
                 break;
+            case  R.id.cntctd:
+                contactdeveloper();
+                break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void contactdeveloper() {
+        Intent i=new Intent(Intent.ACTION_SEND);
+        i.setData(Uri.parse("email"));
+        String[] s={"020upc92@gmail.com"};
+        i.putExtra(Intent.EXTRA_EMAIL,s);
+        i.putExtra(Intent.EXTRA_SUBJECT,"email subject");
+        i.putExtra(Intent.EXTRA_TEXT,"Via apk requests query");
+        i.setType("message/rfc822");
+        Intent chooser = Intent.createChooser(i,"Launch Email");
+        startActivity(chooser);
     }
 
     private void deleteaccount() {
@@ -231,15 +256,13 @@ public class SrchAct extends AppCompatActivity {
 
         AlertDialog alertDialog=builder.create();
         alertDialog.show();
-
-
     }
 
     private void showAlertDialog() {
         final AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setTitle("About Developer");
-        builder.setMessage("Hi there,My name is UMESH KUMAR AHIRWAR and Iam the man behind this app." +
+        builder.setMessage("Hi there,My name is UMESH KUMAR AHIRWAR from MITS college,Gwalior and Iam the man behind this app." +
                 "If you have any suggestions or query just contact me on 020upc92@gmail.com."+"Thank you!");
         builder.setPositiveButton("Close", new DialogInterface.OnClickListener() {
             @Override
