@@ -1,3 +1,5 @@
+Read this before you download:-
+
 This apk was made just for learning purpose also there is no data 
 for the users so users might need to add the data. 
 
@@ -7,7 +9,7 @@ If the USER downloads this apk then there are following conditions:
 2.User must have internet to use this apk.
 3.User must have at least 50MB free storage.
 4.User must have an e-mail id.
-5.If the apk does not work then there might be this reasons:
+5.If the apk does not work then there might be this reasons-
      *Issue with the my Firebase account.
      *User device might not meets the requirement.
 
