@@ -1,4 +1,4 @@
-Read this before you download:-
+Read this before you download apk:-
 
 This apk was made just for learning purpose also there is no data 
 for the users so users might need to add the data. 
